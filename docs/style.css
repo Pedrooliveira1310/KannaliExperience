@@ -1,0 +1,647 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =======================
+   HEADER / NAVBAR
+   ======================= */
+.header {
+  background: linear-gradient(to right, #0b2a66, #2fd2ff);
+  padding: 10px 0;
+}
+
+.navbar {
+  background: white;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 85px;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4a76d4;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.menu a:hover {
+  color: #0b2a66;
+  transform: scale(1.1);
+}
+
+.icons ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.icons i {
+  font-size: 22px;
+  color: #4a76d4;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icons i:hover {
+  color: #0b2a66;
+  transform: scale(1.1);
+}
+
+/* =======================
+   HERO
+   ======================= */
+.hero {
+  height: calc(100vh - 110px);
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("img/fundo.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  margin-left: 80px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 25px 60px;
+  background: #1e3dd8;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 150px;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =======================
+   CONTAINER E CARDS
+   ======================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  background: rgba(11, 60, 138, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+.card.reverse {
+  flex-direction: row-reverse;
+}
+
+.card img {
+  width: 45%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 32px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h2 {
+    background: linear-gradient(90deg, #0a2f6d, #0e4fa3);
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.content p {
+  line-height: 1.75;
+  font-size: 1rem;
+  color: #eaf6ff;
+}
+
+/* =======================
+   RESPONSIVO
+   ======================= */
+@media (max-width: 900px) {
+  .card,
+  .card.reverse {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
+/* =======================
+   CLASSE IMG (usada nas cards)
+   ======================= */
+.img {
+  height: 300px;
+  width: 0px; /* Isso pode estar causando problema, verificar */
+}
+
+/* =======================
+   BODY E BACKGROUND PRINCIPAL
+   ======================= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #122273 0%,
+    #29D4FF 50%,
+    #29D4FF 100%
+  );
+  padding: 30px;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1f2a44;
+  color: #fff;
+}
+
+/* =======================
+   SEÇÕES E BANNERS
+   ======================= */
+.section {
+  padding: 60px 8%;
+  background: linear-gradient(to right, #122273, #29D4FF);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.banner-hospedagem {
+  height: 300px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("img/IMGPREDIO.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-hospedagem h2 {
+  color: #fff;
+  font-size: 48px;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* =======================
+   CARTÕES DE HOSPEDAGEM
+   ======================= */
+.card {
+  display: flex;
+  gap: 30px;
+  background: #0b3c8af2;
+  color: #0d1b3d;
+  border-radius: 16px;
+  align-items: center;
+}
+
+.card.reverse {
+  flex-direction: row-reverse;
+}
+
+.card img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card-text {
+  width: 55%;
+  color: #ffffff;
+}
+
+.card-text h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.card-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-text ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.card-text ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #0d1b3d;
+  border-radius: 50%;
+}
+
+.card-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* =======================
+   RESPONSIVO - CARTÕES HOSPEDAGEM
+   ======================= */
+@media (max-width: 900px) {
+  .card,
+  .card.reverse {
+    flex-direction: column;
+  }
+
+  .card img,
+  .card-text {
+    width: 100%;
+  }
+}
+
+/* =======================
+   BODY GERAL (segundo bloco)
+   ======================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1f2a44;
+  color: white;
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+  background-color: #1f2a44;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-left ul,
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left a,
+.footer-center a {
+  color: #29D4FF;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-left a:hover,
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-left p,
+.footer-right p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-right h3,
+.footer-left h3,
+.footer-center h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-right h4 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.footer-right a {
+  color: #29D4FF;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-right img {
+  width: 50px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.secao-layout {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaço entre as linhas */
+    font-family: sans-serif;
+}
+
+.linha {
+    display: flex;
+    align-items: stretch; /* Faz o texto e a imagem terem a mesma altura */
+    gap: 20px;
+}
+
+.container-info {
+  position: relative;
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 55px;
+    position: relative; /* Essencial para o botão se guiar por este quadro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-imagem {
+    flex: 1;
+}
+
+.box-imagem img {
+    width: 100%;
+    height: 300px;       /* Altura fixa para garantir igualdade */
+    object-fit: cover;   /* Corta a imagem para preencher sem distorcer */
+    border-radius: 12px;
+    display: block;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .linha {
+        flex-direction: column !important;
+    }
+    .box-imagem img {
+        height: 250px;
+    }
+}
+.btn-lateral-total {
+    position: absolute;
+    left: 530px;        /* Posição vertical original */
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    transform: rotate(180deg);
+
+    transition: background 0.3s;
+}
+
+.btn-lateral-total:hover {
+    background-color: #218539;
+}
+li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+.atm{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+.pokemon{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+p{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 24px;
+ color: #ffffff;
+}
+h3{
+  color:#ffffff;
+}
+.sabor{
+  color: #0e4fa3;
+}
+
+/* =======================
+   RESPONSIVIDADE GERAL
+   ======================= */
+
+/* Pequenas telas - até 900px */
+@media (max-width: 900px) {
+  /* Navbar */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .menu a {
+    margin: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .icons ul {
+    gap: 15px;
+  }
+  
+  .icons i {
+    font-size: 18px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 400px;
+    justify-content: center;
+  }
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .cta {
+    margin-left: 0;
+    padding: 18px 40px;
+    font-size: 22px;
+  }
+
+  /* Cards (geral e hospedagem) */
+  .card,
+  .card.reverse {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 12px;
+  }
+
+  .card-text,
+  .content {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  /* Seção layout (linha) */
+  .linha {
+    flex-direction: column !important;
+    gap: 25px;
+  }
+
+  .box-imagem img {
+    height: 220px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-right img {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+/* Telas extra pequenas - até 480px */
+@media (max-width: 480px) {
+  .menu a {
+    margin: 6px 8px;
+    font-size: 12px;
+  }
+
+  .cta {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .card-text ul li {
+    font-size: 14px;
+  }
+
+  p, h3, li {
+    font-size: 18px;
+  }
+
+  .btn-lateral-total {
+    font-size: 0.9rem;
+    height: 100px;
+    width: 40px;
+  }
+}
+@media (max-width: 768px) {
+  
+    .btn-lateral-total {
+        margin-top: 84%;
+        position: absolute;        /* Posicionado dentro do container */
+        bottom: 0;                 /* Parte inferior do container */
+        left: 0;                   /* Começo do container */
+        width: 100%;               /* Ocupa toda a largura */
+        height: 50px;              /* Altura do botão */
+        border-radius: 0 0 12px 12px; /* Arredonda apenas a parte inferior */
+        writing-mode: horizontal-tb; /* Texto horizontal */
+        transform: none;           /* Remove rotação vertical */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
